@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import React, { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { AppContext } from "../context/AppContext";
@@ -18,37 +19,6 @@ const Appointmnet = () => {
   useEffect(() => {
     fetchDocInfo();
   }, [doctors, docId]);
-
-  // return (
-  //   docInfo && (
-  //     <div >
-  //       {/*  */}
-  //       <div >
-  //         <div>
-  //           <img className="bg-primary w-full sm:max-w-72 rounded-lg" src={docInfo.image} />
-  //         </div>
-  //         <div className="flex-1 border border-gray-400 rounded-lg p-8 py-7 bg-white mx-2 sm:mx-0 mt-[-80px] sm:mt-0">
-  //           {/* doc info */}
-  //           <p>
-  //             {docInfo.name} <img src={assets.verified_icon} alt="" />
-  //           </p>
-  //         </div>
-  //         <div>
-  //           <p>
-  //             {docInfo.degree} - {docInfo.speciality}
-  //           </p>
-  //           <button>{docInfo.experience}</button>
-  //         </div>
-  //         <div>
-  //           <p>
-  //             About <img src={assets.info_icon} alt="" />
-  //           </p>
-  //           <p>{docInfo.about}</p>
-  //         </div>
-  //       </div>
-  //     </div>
-  //   )
-  // );
 
   return (
     docInfo && (
@@ -90,7 +60,7 @@ const Appointmnet = () => {
               Appointment fee:{" "}
               <span className="text-gray-600">
                 {currencySymbol}
-                {docInfo.fees}
+                {docInfo.fees + "0"}
               </span>
             </p>
           </div>
